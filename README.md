@@ -1,29 +1,6 @@
 # Hazelcast
 <img src="https://github.com/mrotonik/mrotonik/blob/master/edit2.png" alt="альтернативный текст">
 
-<title>Опис проекту</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    h1 {
-        color: #333;
-    }
-
-    p {
-        margin-bottom: 10px;
-    }
-
-    code {
-        background-color: #f5f5f5;
-        padding: 2px 4px;
-        color: #333;
-    }
-</style>
 </head>
 <body>
 <h1>Розподілений сервіс</h1>
