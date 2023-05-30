@@ -32,5 +32,9 @@
     <li>Надсилайте HTTP запити до <code>localhost</code> на відповідні порти, щоб взаємодіяти з сервісами</li>
 </ol>
 
-<h2>Структура проекту</h2>
+<h2>Демонстрація проекту</h2>
+    <figure>
+  <img src="https://github.com/mrotonik/mrotonik/blob/master/show2.gif" />
+</figure>
+
 <pre>
