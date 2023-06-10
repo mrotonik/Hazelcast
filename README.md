@@ -108,7 +108,11 @@ print(response.json())
 
 response = requests.get("http://localhost:5000/message")
 print(response.json())
+# Вимкнення одного/двох екземплярів logging-service
+# Вимкніть сервіс, який працює на порті 5005 або 5006
 
+response = requests.get("http://localhost:5000/message")
+print(response.json())
 </code></pre>
 
 
