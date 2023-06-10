@@ -14,7 +14,7 @@
   <a href="#architecture">Архітектура</a> •
   <a href="#installation">Інсталяція</a> •
   <a href="#usage">Використання</a> •
-
+  <a href="#dp">Демонтрація проекту</a> •
 </p>
 
 ---
@@ -125,7 +125,7 @@ print(response.json())
 
 
 
-<h2>Демонстрація проекту</h2>
+<h2 id="dp">Демонстрація проекту</h2>
     <figure>
   <img src="https://github.com/mrotonik/mrotonik/blob/master/laba2.gif" />
 </figure>
