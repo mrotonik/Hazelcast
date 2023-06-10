@@ -90,7 +90,24 @@ uvicorn messages-service:app --port 5002
   <li>Відправте POST-запит до facade-service з текстовим повідомленням:</li>
 </ol>
 
-<pre><code>curl -X POST -H "Content-Type: application/json" -d '{"msg": "Hello, World!"}' http://localhost:5000/message
+<pre><code>import requests
+
+# HTTP POST-запити для запису 10 повідомлень через facade-service
+messages = ["msg1", "msg2", "msg3", "msg4", "msg5", "msg6", "msg7", "msg8", "msg9", "msg10"]
+for msg in messages:
+    response = requests.post("http://localhost:5000/message", json={"msg": msg})
+    print(response.json())
+
+
+response = requests.get("http://localhost:5000/message")
+print(response.json())
+
+# Вимкнення одного/двох екземплярів logging-service
+# Вимкніть сервіс, який працює на порті 5005 або 5006
+
+response = requests.get("http://localhost:5000/message")
+print(response.json())
+
 </code></pre>
 
 <p>facade-service прийме ваш запит та випадковим чином обере екземпляр logging-service для запису повідомлення. Записане повідомлення буде збережено разом із унікальним ідентифікатором UUID.</p>
