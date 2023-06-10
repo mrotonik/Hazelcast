@@ -127,7 +127,7 @@ print(response.json())
 
 <h2>Демонстрація проекту</h2>
     <figure>
-  <img src="https://github.com/mrotonik/mrotonik/blob/master/show2.gif" />
+  <img src="https://github.com/mrotonik/mrotonik/blob/master/laba2.gif" />
 </figure>
 
 <pre>
