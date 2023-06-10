@@ -14,8 +14,7 @@
   <a href="#architecture">Архітектура</a> •
   <a href="#installation">Інсталяція</a> •
   <a href="#usage">Використання</a> •
-  <a href="#contributing">Сприяння</a> •
-  <a href="#license">Ліцензія</a>
+
 </p>
 
 ---
@@ -26,7 +25,7 @@
 
 <ul>
   <li><strong>facade-service</strong>: отримує POST/GET запити від клієнта.</li>
-  <li><strong>logging-service</strong>: зберігає повідомлення в розподіленій карті за допомогою Hazelcast.</li>
+  <li><strong>logging-service 1-3</strong>: зберігає повідомлення в розподіленій карті за допомогою Hazelcast.</li>
   <li><strong>messages-service</strong>: виступає заглушкою і повертає статичне повідомлення.</li>
 </ul>
 
@@ -50,11 +49,11 @@
   <li>Склонуйте репозиторій:</li>
 </ol>
 
-<pre><code>git clone https://github.com/your-username/microservices-project.git
+<pre><code>git clone https://github.com/mrotonik/Hazelcast
 </code></pre>
 
 <ol start="2">
-  <li>Встановіть залежності для кожного мікросервісу. Перейдіть до кожної папки мікросервісу (facade-service, logging-service, messages-service) та виконайте команду:</li>
+  <li>Встановіть залежності для кожного мікросервісу. Перейдіть до кожної папки мікросервісу (facade-service, logging-service1,logging-service2,logging-service3, messages-service) та виконайте команду:</li>
 </ol>
 
 <pre><code>pip install -r requirements.txt
@@ -74,7 +73,9 @@
 </ol>
 
 <pre><code>uvicorn facade-service:app --port 5000
-uvicorn logging-service:app --port 5001
+uvicorn logging-service_1:app --port 5001
+uvicorn logging-service_2:app --port 5005
+uvicorn logging-service_2:app --port 5006
 uvicorn messages-service:app --port 5002
 </code></pre>
 
@@ -82,7 +83,7 @@ uvicorn messages-service:app --port 5002
 
 <h2 id="usage">Використання</h2>
 
-<p>Після запуску мікросервісів ви можете взаємодіяти з ними за допомогою HTTP POST та GET запитів. Для цього ви можете використовувати такі інструменти, як curl, Postman або браузер в режимі розробки.</p>
+<p>Після запуску мікросервісів ви можете взаємодіяти з ними за допомогою HTTP POST та GET запитів. Для цього ви можете використовувати test.py</p>
 
 <h3>Потік запитів HTTP POST:</h3>
 
@@ -110,28 +111,9 @@ print(response.json())
 
 </code></pre>
 
-<p>facade-service прийме ваш запит та випадковим чином обере екземпляр logging-service для запису повідомлення. Записане повідомлення буде збережено разом із унікальним ідентифікатором UUID.</p>
 
-<h3>Потік запитів HTTP GET:</h3>
 
-<ol start="2">
-  <li>Відправте GET-запит до facade-service:</li>
-</ol>
 
-<pre><code>curl http://localhost:5000/message
-</code></pre>
-
-<p>facade-service відправить GET-запити до logging-service та messages-service та поверне результат клієнту.</p>
-
-<h2 id="contributing">Сприяння</h2>
-
-<p>Якщо ви бажаєте допомогти у вдосконаленні проекту, будь ласка, перегляньте <code>CONTRIBUTING.md</code> для отримання деталей щодо процесу сприяння та розробки.</p>
-
-<h2 id="license">Ліцензія</h2>
-
-<p>Цей проект ліцензовано за умовами ліцензії MIT. Детальніше про це читайте у файлі <code>LICENSE</code>.</p>
-
-<p align="center">Розроблено з ❤️</p>
 
 
 
