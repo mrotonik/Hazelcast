@@ -1,5 +1,5 @@
 # Hazelcast
-<img src="https://github.com/mrotonik/mrotonik/blob/master/laba3.png" alt="альтернативный текст">
+
 
 
 
